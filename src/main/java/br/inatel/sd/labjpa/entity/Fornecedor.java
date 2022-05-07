@@ -28,6 +28,16 @@ public class Fornecedor {
 	@NotNull
 	@Size(max= 50)
 	private String razaoSocial;
+	
+	
+	public Fornecedor(@NotNull @Size(max = 50) String razaoSocial) {
+		super();
+		this.razaoSocial = razaoSocial;
+	}
+
+	public Fornecedor() {
+		
+	};
 
 	public Long getId() {
 		return id;

@@ -28,10 +28,19 @@ public class NotaCompra {
 	@ManyToOne // '...toOne' vai vira FK na tabela do BD
 	private Fornecedor fornecedor;
 	
+	
 	public Long getId() {
 		return id;
 	}
 
+	public NotaCompra( @NotNull LocalDate dataEmissao, @NotNull Fornecedor fornecedor) {
+		super();
+		this.fornecedor = fornecedor;
+		this.dataEmissao = dataEmissao;
+	}
+	public NotaCompra() {
+		
+	}
 	public void setId(Long id) {
 		this.id = id;
 	}
